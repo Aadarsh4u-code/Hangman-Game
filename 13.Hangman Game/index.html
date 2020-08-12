@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marvel&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/hangmanGame.css" />
+    <script src="/dist/js/hangmanGame.js" defer></script>
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+    <div class="game-container">
+      <svg class="figure-container" height="300px" width="250px">
+        <!-- Rod -->
+        <line x1="60" y1="20" x2="200" y2="20" />
+        <line x1="200" y1="20" x2="200" y2="70" />
+        <line x1="60" y1="20" x2="60" y2="290" />
+        <line x1="20" y1="290" x2="100" y2="290" />
+
+        <!-- Head -->
+        <circle cx="200" cy="100" r="30" class="figure-parts"></circle>
+
+        <!-- Body -->
+        <line x1="200" y1="130" x2="200" y2="220" class="figure-parts" />
+
+        <!-- Arms -->
+        <line x1="160" y1="130" x2="200" y2="170" class="figure-parts" />
+        <line x1="200" y1="170" x2="240" y2="130" class="figure-parts" />
+
+        <!-- Legs -->
+        <line x1="160" y1="250" x2="200" y2="220" class="figure-parts" />
+        <line x1="200" y1="220" x2="240" y2="250" class="figure-parts" />
+      </svg>
+
+      <div class="wrong-letter-container">
+        <div id="wrong-letters"></div>
+      </div>
+      <div class="word" id="word"></div>
+    </div>
+
+    <!-- Container for final message -->
+    <div class="popup-container" id="popup-container">
+      <div class="popup">
+        <h2 id="final-message"></h2>
+        <button id="play-button">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification-container" id="notification-container">
+      <p>You Have already entered this letter</p>
+    </div>
+  </body>
+</html>
